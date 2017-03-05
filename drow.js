@@ -24,5 +24,19 @@ $(".div_body").html(allTable)
 //////////////////////////////////////////////
 
 //рисуем экран одного дня
-m = 3 // День который рисуем (берем из локалсторидж)
-var day_ex_item="<div class='day_ex_item'><div class='day_ex_item_left'><div class='day_ex_item_middle'><div class='day_ex_item_right'></div>"
+function drowDay(){
+
+	m = 3 // День который рисуем (берем из локалсторидж)
+	var day_ex_item="";
+	$(".menu_right").html("<p>День "+m+"</p>")
+	for (var i=1; i<=completeDay[m].lenght; i++){
+		day_ex_item+="<div class='day_ex_item'>"
+		day_ex_item+="<div class='day_ex_item_left'></div>"
+		day_ex_item+="<div class='day_ex_item_middle'></div>"
+		day_ex_item+="<div class='day_ex_item_right'></div>"
+		day_ex_item+="</div>"
+	}
+}
+
+drowDay()
+
