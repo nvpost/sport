@@ -43,9 +43,7 @@ html, body{
 	color: #808080;
 
 }
-.passed{
-	background-color: #ADFEAF
-}
+
 .header_left>p{
 	font-size: 1em;
 	font-weight: bold;
@@ -79,4 +77,15 @@ html, body{
 }
 .day_ex_item_middle, .day_ex_item_right{
 	text-align: right;
+}
+
+.passed{
+	background-color: #ADFEAF
+}
+.planka{
+
+}
+div.timer {
+	height:100%;
+	width: 100%;
 }
