@@ -1,8 +1,22 @@
 
 //Рисуем экран всех дней
+var pass=0
+var btn=" btn'>"
+if(notStart){
+	pass = lhis.length
+}
 var allTable="";
 for (var i=0; i<30; i++ ){
-	allTable+="<div class='plitka'>"
+
+	allTable+="<div class='plitka"
+	if (pass!==0){
+		allTable+=" passed'>"
+		pass--;
+	}else{
+		allTable+=btn;
+		btn="'>";
+		
+	}
 	//Заголовок
 	allTable+="<div class='plitka_header'>"
 	allTable+="<div class='header_left'><p>День "+(parseInt(i)+1)+"</p></div>"
@@ -13,11 +27,20 @@ for (var i=0; i<30; i++ ){
 	//Тело плитки
 	allTable+="<div class='plitka_body'>"	
 	for (j in exercises){
-		allTable+="<p class='ex_item'>"+exercises[j].name+": <span>"+exercises[j].ex[i]+"</span></p>"
+		allTable+="<p class='ex_item'>"+exercises[j].name+": <span>"+exercises[j].ex[i]+drowPassed(j, i)+"</span></p>"
 	}
 	allTable+="</div>"
 	allTable+="</div>"
 
+}
+//Добавляем в таблицу результату которые уже есть
+function drowPassed(j, i){
+	var passSrt=''
+	if(i<lhis.length){
+		console.log(i+" - "+j)
+		passSrt=" ("+lhis[i][j]+")"
+	}
+	return passSrt;
 }
 
 $(".div_body").html(allTable)
@@ -26,16 +49,17 @@ $(".div_body").html(allTable)
 //рисуем экран одного дня
 function drowDay(){
 
-	m = 3 // День который рисуем (берем из локалсторидж)
+	m = typeof lhis !== 'undefined' ? lhis.length+1  : 0; // День который рисуем (берем из локалсторидж)
 	var day_ex_item="";
 	$(".menu_right").html("<p>День "+m+"</p>")
-	for (var i=1; i<=completeDay[m].lenght; i++){
+	for (var i in exercises){
 		day_ex_item+="<div class='day_ex_item'>"
-		day_ex_item+="<div class='day_ex_item_left'></div>"
-		day_ex_item+="<div class='day_ex_item_middle'></div>"
-		day_ex_item+="<div class='day_ex_item_right'></div>"
+		day_ex_item+="<div class='day_ex_item_left'>"+exercises[i].name+"</div>"
+		day_ex_item+="<div class='day_ex_item_middle'>"+exercises[i].ex[m]+"</div>"
+		day_ex_item+="<div class='day_ex_item_right'>y/n</div>"
 		day_ex_item+="</div>"
 	}
+	$('.div_body_day').html(day_ex_item)
 }
 
 drowDay()

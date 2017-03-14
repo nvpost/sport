@@ -1,3 +1,4 @@
+var lhis=JSON.parse(localStorage.jhis)
 var days=30;
 var exercises=[
 {"name": "Планка", "ex":[20, 20, 30, 30, 0, 45, 45, 60, 60, 60, 90, 0, 90, 90, 120, 120, 150, 0, 150, 150, 180, 180, 210, 210, 0, 240, 240, 270, 300]}, 
@@ -14,3 +15,5 @@ for (var i=0; i<30; i++){
 	
 	completeDay.push(day);
 }
+var js=[[20,50,25,5,5]]
+localStorage.jhis = JSON.stringify(js);
