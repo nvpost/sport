@@ -1,0 +1,19 @@
+#tablo{
+  font-size: 5em;
+  font-weight: bolt;
+}
+.ms{
+  font-size: 0.5em;
+}
+.timer{
+  width: 100%;
+  text-align: center;
+}
+.preTimer{
+  font-size: 3em;
+
+  transition: all 0.5s ease;
+}
+.preTimer{
+  height: 100px;
+}

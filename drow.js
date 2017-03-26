@@ -50,13 +50,13 @@ function drowDay(){
 
 	m = typeof lhis !== 'undefined' ? lhis.length  : 0; // День который рисуем (берем из локалсторидж)
 	var day_ex_item="";
-	$(".menu_right").html("<p>День "+m+1+"</p>")
+	$(".menu_right").html("<p>День "+(m+1)+"</p>")
 	for (var i in exercises){
 		day_ex_item+="<div class='day_ex_item' data-task="+i+">"
 		day_ex_item+="<div class='day_ex_item_left'>"+exercises[i].name+"</div>"
 		day_ex_item+="<div class='day_ex_item_middle'>"+exercises[i].ex[m]+"</div>"
 		day_ex_item+="<div class='day_ex_item_right'></div>"
-		day_ex_item+="<div class='timer'></div>"
+		if(i==0){day_ex_item+="<div class='timer'></div>"}
 		day_ex_item+="</div>"
 	}
 	$('.div_body_day').html(day_ex_item)
@@ -70,3 +70,6 @@ $(".btn").click(function(){
 })
 
 drowDay()
+
+
+
