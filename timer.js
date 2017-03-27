@@ -1,6 +1,6 @@
 
 var pretimer=3
-var time=3000
+var time=exercises[0].ex[m]*100
 function drowPre(){
   //$('.preTimer').html("Готовьсь!")
   $('#tablo').html(time/100+".<span class='ms'>00</span>")
@@ -16,6 +16,7 @@ function timer(){
   time-=1;
   if(time<0){
     clearInterval(interval);
+    molodetc()
   } 
 }
 
@@ -41,7 +42,16 @@ function preTimer(){
    pretimer-=1
 }
 function pognali(){
-  $('.preTimer').find('span').fadeOut(2000)
+  $('.preTimer').find('span').fadeOut(2000, function(){
+    $('#tablo').addClass('bigTimer')
+  })
   $('#tablo').fadeIn(500)
   interval = setInterval(timer, 10)
+}
+
+function molodetc(){
+  setTimeout(function(){
+    $('#tablo').fadeOut(300)
+    $('[data-task=0]').addClass('passed').animate({'height':'70'},500);
+  }, 1000)
 }

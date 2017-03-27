@@ -55,7 +55,7 @@ function drowDay(){
 		day_ex_item+="<div class='day_ex_item' data-task="+i+">"
 		day_ex_item+="<div class='day_ex_item_left'>"+exercises[i].name+"</div>"
 		day_ex_item+="<div class='day_ex_item_middle'>"+exercises[i].ex[m]+"</div>"
-		day_ex_item+="<div class='day_ex_item_right'></div>"
+		//day_ex_item+="<div class='day_ex_item_right'></div>"
 		if(i==0){day_ex_item+="<div class='timer'></div>"}
 		day_ex_item+="</div>"
 	}
@@ -65,7 +65,6 @@ function drowDay(){
 
 
 $(".btn").click(function(){
-	console.log('sdf')
 	document.location.href="screen_day.html"
 })
 

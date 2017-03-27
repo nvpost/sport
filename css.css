@@ -70,17 +70,20 @@ html, body{
 }
 .day_ex_item>div{
 	display: inline-table;
-	width: 31%;
-	padding-left: 5px;
-	margin-top: 20px;
+	width: 45%;
+	padding-left: 15px;
+	margin-top: 25px;
+	font-size: 1.5em;
+
 
 }
-.day_ex_item_middle, .day_ex_item_right{
-	text-align: right;
+.day_ex_item_middle{
+	text-align: center;
 }
 
 .passed{
-	background-color: #ADFEAF
+	background-color: #ADFEAF;
+	transition: all 1.5s ease;
 }
 .planka{
 

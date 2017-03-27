@@ -1,6 +1,6 @@
-#tablo{
-  font-size: 5em;
-  font-weight: bolt;
+.tablo{
+  font-size: 4em;
+  font-weight: bold;
 }
 .ms{
   font-size: 0.5em;
@@ -16,4 +16,10 @@
 }
 .preTimer{
   height: 100px;
+}
+.bigTimer{
+  font-size: 9em;
+  font-weight: bold;
+  transition: all 0.7s ease;
+
 }
