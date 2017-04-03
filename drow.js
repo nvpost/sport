@@ -59,16 +59,20 @@ function drowDay(){
 }
 
 $(".btn").click(function(){
-	var eplTime= +new Date() - lastExTime;
-	var eplSec=(eplTime/1000).toFixed(0)
-	var eplMin=Math.floor(eplSec/60)
-	var eplH=Math.floor(eplMin/60)
-	if(eplH<13){
-		console.log("Прошло всего "+eplH+"ч. "+eplMin+"мин. "+(eplSec%60)+"сек. ")
-		if(confirm('Действительно продолжить?')){document.location.href="screen_day.html"}
-	}
-	
-})
+	console.log('da')
+	if(lastExTime<10){
+		document.location.href="screen_day.html"
+	}else{
+		var eplTime= +new Date() - lastExTime;
+			var eplSec=(eplTime/1000).toFixed(0)
+			var eplMin=Math.floor(eplSec/60)
+			var eplH=Math.floor(eplMin/60)
+			if(eplH<13){
+				if(confirm("Прошло всего "+eplH+"ч. "+eplMin+"мин. "+(eplSec%60)+"сек. "+"Действительно продолжить?")){document.location.href="screen_day.html"}
+			}
+		}
+			
+	})
 
 drowDay()
 $('[data-task]').each(function(){

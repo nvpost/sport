@@ -30,13 +30,12 @@ function countDay(){
 	if(countDayEx==5){
 		console.log('День завершён');
 		m++
-		localStorage.setItem("sportApp-m", m)
+		var nd = +new Date()
+		localStorage.setItem("sportApp-m", m);
+		localStorage.setItem('sportApp-lastExTime', nd)
 	}
 }
-var nowTime= +new Date()
-function nextDayQuery(){
 
-}
 
 
 
