@@ -10,7 +10,7 @@
   text-align: center;
 }
 .preTimer{
-  font-size: 3em;
+  font-size: 2em;
 
   transition: all 0.5s ease;
 }
@@ -18,8 +18,9 @@
   height: 100px;
 }
 .bigTimer{
-  font-size: 9em;
+  font-size: 6em;
   font-weight: bold;
+  text-align: center;
   transition: all 0.7s ease;
 
 }

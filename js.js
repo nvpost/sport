@@ -1,8 +1,4 @@
-var lhis=[]
+//var lhis=[]
 var notStart=false
-if(localStorage.jhis){
-	lhis=JSON.parse(localStorage.jhis)
-	notStart=true
-}else{
-	console.log("Нет такого")
-}
+var m = typeof localStorage.getItem("sportApp-m") !== 'undefined' ? parseInt(localStorage.getItem("sportApp-m"))  : 0;
+var lastExTime = typeof localStorage.getItem("sportApp-lastExTime") !== 'undefined' ? parseInt(localStorage.getItem("sportApp-lastExTime"))  : 0;

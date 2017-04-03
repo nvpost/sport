@@ -1,6 +1,6 @@
 
 var pretimer=3
-var time=exercises[0].ex[m]*100
+
 function drowPre(){
   //$('.preTimer').html("Готовьсь!")
   $('#tablo').html(time/100+".<span class='ms'>00</span>")

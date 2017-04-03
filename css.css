@@ -2,20 +2,30 @@ html, body{
 	width: 100%;
 	margin:0px;
 	font-family: 'Roboto', sans-serif;
+	background: url(img/bg2.jpg);
+	background-size: 50%;
 
 }
-
+.menu_right {
+	padding-right: 20px;
+	font-weight: bold;
+}
+.menu_left{
+	font-weight: bold;
+}
 .header{
 	box-shadow: 0px 1px 1px 0px #c0c0c0;
 	height: 70px;
 	position: fixed;
 	width: 100%;
 	top: 0px;
-	background-color: #fff;
+	background-color: #db66fb;
+	
 
 }
 .div_body{
 	margin-top: 100px;
+	    text-align: center;
 }
 .header>div{
 	display: inline-block;
@@ -37,10 +47,11 @@ html, body{
 	border: 1px solid gray;
 	height: 200px;
 	margin: 1px;
-	margin-left: 3px;
-	width: 31%;
-	padding-left: 3px;
-	color: #808080;
+	width: 30%;
+	padding: 2px;
+	color: #282828;
+	box-shadow: 0px 1px 1px 0px #c0c0c0;
+	background-color: #F6F6F6;
 
 }
 
@@ -52,8 +63,20 @@ html, body{
 }
 
 .ex_item{
-	line-height: 0.5;
+	line-height: 1.5;
 	font-size: 0.8em;
+	text-align: left;
+	width: 100%;
+	border-bottom: 1px solid gray;
+}
+.ex_item>div{
+	display: inline-block;
+}
+.exName{
+	width: 70%;
+}
+.exCount{
+	width: 25%;
 }
 /*Один день*/
 .div_body_day{
@@ -71,14 +94,17 @@ html, body{
 .day_ex_item>div{
 	display: inline-table;
 	width: 45%;
-	padding-left: 15px;
 	margin-top: 25px;
 	font-size: 1.5em;
 
 
 }
+.day_ex_item_left{
+	padding-left: 15px;
+}
 .day_ex_item_middle{
-	text-align: center;
+	text-align: right;
+	padding-right: 10px;
 }
 
 .passed{
