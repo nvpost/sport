@@ -119,3 +119,82 @@ div.timer {
 	height:100%;
 	width: 100%;
 }
+/*Index*/
+.headImg{
+	box-shadow: 1px 2px 2px 0px #c0c0c0;
+}
+.index_btn{
+	text-align: center;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+.index_btn>p{
+	margin-top: 5px;
+	padding-top: 10px;
+    font-size: 1.5em;
+}
+.index_progress{
+	height: 200px;
+	text-align: center;
+	margin-top: 10px;
+	width: 95%;
+    margin-left: 2.5%;
+    box-shadow: 1px 2px 2px 0px #c0c0c0;
+	background-color: floralwhite;
+
+
+
+}
+.index_progress_header{
+	margin-top:10px;
+	font-size: 1em;
+	font-weight: bold;
+}
+.progress_body{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.progress{
+	width: 70%;
+}
+.progress_row>div{
+	display: inline-table;
+}
+
+.progress_dig{
+	width: 15%;
+	text-align: left;
+}
+.progress_row{
+	border-bottom: 1px solid gray;
+	margin-bottom: 5px;
+}
+.pleft{
+	text-align: left;
+}
+.pright{
+	text-align: right;
+}
+.ex_name{
+	 font-size: 0.7em;
+    font-weight: bold;
+}
+.reset{
+	width: 100%;
+	height: 30px;
+	text-align: left;
+	margin-top: 25px;
+}
+.reset_btn{
+	margin-right: 10px;
+	border-radius: 5px;
+	text-align: center;
+	width: 40%;
+	padding: 5px;
+	height: 100%;
+	background-color: red;
+	color: white;
+	font-size: 0.8em;
+}
