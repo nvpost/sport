@@ -1,15 +1,13 @@
 
 var pretimer=3
-
+time=time*10
 function drowPre(){
   //$('.preTimer').html("Готовьсь!")
-  $('#tablo').html(time/100+".<span class='ms'>00</span>")
+  $('#tablo').html(time/10+".<span class='ms'>00</span>")
   var w=$('#tablo').width()/2
   $('.timerTablo').css("left", "calc(50% - "+w+"px)")
   preInterval = setInterval(preTimer, 1000)
 }
-
-
 
 function timer(){
   $('#tablo').html(drowTimer(time))
@@ -21,15 +19,15 @@ function timer(){
 }
 
 function drowTimer(t){
-  var m = (t/100).toFixed();
-  var ms=t%100;
-  if(String(ms).length==1){
+  var m = (t/10).toFixed();
+  var ms=t%10;
+  /*if(String(ms).length==1){
     if(ms>10){
       ms=ms+"0";
     }else{
       ms="0"+ms;
     }
-  }
+  }*/
   return m+".<span class='ms'>"+ms+"</span>"
 }
 function preTimer(){
@@ -46,7 +44,7 @@ function pognali(){
     $('#tablo').addClass('bigTimer')
   })
   $('#tablo').fadeIn(500)
-  interval = setInterval(timer, 10)
+  interval = setInterval(timer, 100)
 }
 
 function molodetc(){

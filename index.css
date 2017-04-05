@@ -1,0 +1,38 @@
+.body, .html{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+.bg{
+	position: absolute;
+	top:20px;
+	/*padding: 10px;*/
+	width: 95%;
+	height: 85%;
+	background: url('img/index_bg.jpeg');
+	background-repeat: no-repeat;
+	background-size: 99%;
+	background-position: 0px 20px;
+	z-index: -5;
+	opacity: 0.5;
+}
+.header_index{
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+
+
+}
+.header_index{
+	background-color: rgba(255,255,255,0.5);
+	margin-top: 100px;
+}
+.header_index>h2{
+	font-size: 1.2 em;
+	color: #db66fb;
+}
+.header_index>h3{
+	font-size: 0.8 em;
+	color: #000;
+	margin-top: 0px;
+}
