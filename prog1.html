@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
+
+
+	<script src="jq.js"></script>
+	<script src="exercises.js"></script>
+	<script src="js.js"></script>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="progLayer">
+	<div class="progHeader">Программа 1</div>
+	<div class="progBody"></div>
+	
+
+</div>
+<div class="prog_btnBlock">
+	<div class="prog_btnStart">Начать</div>
+	<div class="prog_btnBack">Назад</div>
+</div>
+</body>
+<script type="text/javascript">
+	var content="";
+	for(var i=0; i<30; i++){
+			content+="<div class='day'>"
+			content+="<div class='dayHeader'><p>День "+(parseInt(i)+1)+"</p></div>"
+			content+="<div class='dayContent'>"
+			for (var n in exercises){
+				content+="<div class='dayRow'><div class='dayEx'>"+exercises[n].name+"</div><div class='dayExCount'>"+exercises[n].ex[i]+"</div></div>"
+			}
+			content+="</div>"
+			content+="</div>"
+	}
+	$('.progBody').html(content)
+	/*for (var i in exercises){
+		content+="<h3>"+exercises[i].name+"</h3>"
+	}*/
+</script>
+</html>

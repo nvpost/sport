@@ -17,3 +17,5 @@ for (var i=0; i<30; i++){
 }
 var js=[[20,50,25,5,5]]
 localStorage.jhis = JSON.stringify(js);
+
+var progArr=["Програма 1", "Програма 2", "Програма 3"]
