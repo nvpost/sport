@@ -9,12 +9,12 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body>
-<div class="progLayer">
-	<div class="progHeader">Программа 1</div>
-	<div class="progBody"></div>
-	
+	<div class="progLayer">
+		<div class="progHeader">Программа 1</div>
+		<div class="progBody"></div>
+		
 
-</div>
+	</div>
 <div class="prog_btnBlock">
 	<div class="prog_btnStart">Начать</div>
 	<div class="prog_btnBack">Назад</div>
@@ -33,8 +33,12 @@
 			content+="</div>"
 	}
 	$('.progBody').html(content)
-	/*for (var i in exercises){
-		content+="<h3>"+exercises[i].name+"</h3>"
-	}*/
+$(".prog_btnBack").click(function(){
+	document.location.href="index.html"
+})
+$(".prog_btnStart").click(function(){
+	document.location.href="screen1.html"
+})
+
 </script>
 </html>

@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+	<script src="jq.js"></script>
+	<script src="exercises.js"></script>
+	<script src="js.js"></script>
+	<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="headImg">
+	<img src='img/index_bg3.jpg' width=100%>
+</div>
+
+
+
+			
+
+
+			<div class="index_progress">
+				<div class="progress_body" id="progress_field">
+
+				</div>
+			</div>
+			<div class="index_btn day_ex_item"><p id="indexDays" ></p></div>
+			<div class="reset"><div class="reset_btn">Сбросить и начать заного</div></div>
+</body>
+<script>
+if(m=0){
+	$('.day_ex_item, .reset').show()
+	$('#indexDays').html("Начать "+(m+1)+"й день")
+	var progressDiv='';
+	progressDiv+='<div class="index_progress_header">Прогресс</div>'
+	for(var i in exercises){
+		var max=exSum(exercises[i].ex);
+		var val=passSum(exercises[i].ex)
+		console.log(val + " / "+ max)
+		
+		progressDiv+="<div class='ex_name'>"+exercises[i].name+"</div>"
+		progressDiv+="<div class='progress_row'><div class='progress_dig pright'><span> "+val+" </span></div>"
+		progressDiv+="<div class='progress'><progress value="+val+" max="+max+"></progress></div>"
+		progressDiv+="<div  class='progress_dig pleft'><span> "+max+" </span></div></div>"
+		
+	}
+	function exSum(n){
+		var sum=0;
+		for(var j in n){
+			sum+=n[j];
+		}
+		return sum;
+	}
+	function passSum(e){
+		var pSum=0;
+		for (var w=0; w<m; w++){
+			pSum+=e[w];
+		}
+		return pSum;
+	}
+	$('#progress_field').html(progressDiv)
+
+}else{
+$('.index_progress').css('height', '300px')
+	var content="<div class='index_start_header'>Давайте начнем</div>"
+	var programs="";
+	for(i in progArr){
+		programs+="<div class='btnProg' onclick='goToProg("+i+")'>"+progArr[i]+"</div>"
+	}
+	programs+="<div class='btnProg'>Собственная программа</div>"
+
+	$('#progress_field').html(content+programs)
+}
+
+
+function goToProg(n){
+	if(n==0){
+		var url="prog"+(n+1)+".html";
+		document.location.href=url
+	}else{
+		alert("Программы "+(n+1)+" пока нет")
+	}
+	
+}
+</script>
+</html>
